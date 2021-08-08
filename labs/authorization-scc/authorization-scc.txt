@@ -1,0 +1,37 @@
+[student@workstation ~]$ lab authorization-scc start
+
+Checking prerequisites for Guided Exercise: Controlling Application Permissions with Security Context Constraints
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'authorization-scc' project is absent...................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Controlling Application Permissions with Security Context Constraints
+
+ · Validate 'admin' can log in with password 'redhat'..........  SUCCESS
+ · Validate 'leader' can log in with password 'redhat'.........  SUCCESS
+ · Validate 'developer' can log in with password 'developer'...  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$
+
+
+[student@workstation authorization-scc]$ oc delete project authorization-scc
+project.project.openshift.io "authorization-scc" deleted
+[student@workstation authorization-scc]$ lab authorization-scc finish
+
+Completing Guided Exercise: Controlling Application Permissions with Security Context Constraints
+
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation authorization-scc]$ 
+
+

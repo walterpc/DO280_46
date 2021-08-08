@@ -1,0 +1,48 @@
+[student@workstation ~]$ lab schedule-pods start
+
+Checking prerequisites for Guided Exercise: Controlling Pod Scheduling Behavior
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+
+ Checking for conflicts with existing OpenShift projects:
+ · The 'schedule-pods' project is absent.......................  SUCCESS
+ · The 'schedule-pods-ts' project is absent....................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Controlling Pod Scheduling Behavior
+
+ · Validate 'admin' can log in with password 'redhat'..........  SUCCESS
+ · Validate 'leader' can log in with password 'redhat'.........  SUCCESS
+ · Validate 'developer' can log in with password 'developer'...  SUCCESS
+
+ Preparing the student's cluster:
+ · Download exercise files.....................................  SUCCESS
+ · Download solution files.....................................  SUCCESS
+ · Label the first worker node with 'client=ACME'..............  SUCCESS
+ · Create project 'schedule-pods-ts' for troubleshooting.......  SUCCESS
+ · Assign 'edit' role to 'developer' on 'schedule-pods-ts'.....  SUCCESS
+ · Deploy 'hello-ts' application to 'schedule-pods-ts'.........  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$
+
+
+[student@workstation ~]$ lab schedule-pods finish
+
+Completing Guided Exercise: Controlling Pod Scheduling Behavior
+
+ · Delete OpenShift project 'schedule-pods-ts'.................  SUCCESS
+ · Wait for project 'schedule-pods-ts' to be gone..............  SUCCESS
+ · Remove exercise files.......................................  SUCCESS
+ · Remove solution files.......................................  SUCCESS
+ · Remove 'client' label from worker nodes.....................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+

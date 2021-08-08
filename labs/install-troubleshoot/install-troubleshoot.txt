@@ -1,0 +1,62 @@
+[student@workstation ~]$ lab install-troubleshoot start
+
+Checking prerequisites for Guided Exercise: Troubleshooting OpenShift Clusters and Applications
+
+ Preparing the student's workstation:
+ · Download exercise files.....................................  SUCCESS
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'install-troubleshoot' project is absent................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Troubleshooting OpenShift Clusters and Applications
+
+ Restoring authentication settings to installation defaults:
+ · Removing 'cluster-admin' role from the 'admin' user.........  SUCCESS
+ · Remove HTPasswd secret: 'htpasswd-secret'...................  SUCCESS
+ · Remove all configured Identity Providers....................  SUCCESS
+ Preparing the exercise:
+ · Create project 'install-troubleshoot'.......................  SUCCESS
+ · Deploy PostgreSQL in 'install-troubleshoot'.................  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+
+
+[student@workstation ~]$ ls -l /usr/local/etc/
+total 8
+-rw-r--r--. 1 root root 177 Jul 31 18:22 ocp4.config
+-rwxr--r--. 1 root root 178 Jul 13 09:02 ocp4.defaults
+[student@workstation ~]$ cat /usr/local/etc/ocp4.config 
+RHT_OCP4_MASTER_API=https://api.ocp4.example.com:6443
+RHT_OCP4_WILDCARD_DOMAIN=apps.ocp4.example.com
+RHT_OCP4_KUBEADM_PASSWD=waoWn-5S9VM-6cSsy-kMAyk
+RHT_OCP4_USER_PASSWD=redhat
+[student@workstation ~]$ source /usr/local/etc/ocp4.config 
+[student@workstation ~]$ 
+
+[student@workstation ~]$ cat /usr/local/etc/ocp4.defaults
+RHT_OCP4_MODE=administration
+RHT_OCP4_MASTER_API=https://api.ocp4.example.com:6443
+RHT_OCP4_CLUSTER_ID=
+RHT_OCP4_WILDCARD_DOMAIN=apps.ocp4.example.com
+RHT_OCP4_KUBEADM_PASSWORD=
+[student@workstation ~]$ 
+
+
+[student@workstation ~]$ lab install-troubleshoot finish
+
+Completing Guided Exercise: Troubleshooting OpenShift Clusters and Applications
+
+ · Delete OpenShift project 'install-troubleshoot'.............  SUCCESS
+ · Wait for project 'install-troubleshoot' to be gone..........  SUCCESS
+ · Remove exercise files.......................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+

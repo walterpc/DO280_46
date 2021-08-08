@@ -1,0 +1,41 @@
+[student@workstation ~]$ oc whoami
+kube:admin
+[student@workstation ~]$ lab auth-provider start
+
+Checking prerequisites for Guided Exercise: Configuring Identity Providers
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'auth-provider' project is absent.......................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Configuring Identity Providers
+
+ Preparing the student's workstation:
+ · Download exercise files.....................................  SUCCESS
+ · Download solution files.....................................  SUCCESS
+ Restoring authentication settings to installation defaults:
+ · No need to perform any change...............................  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$
+
+
+[student@workstation auth-provider]$ cd
+[student@workstation ~]$ lab auth-provider finish 
+
+Completing Guided Exercise: Configuring Identity Providers
+
+ · Remove exercise files.......................................  SUCCESS
+ · Remove solution files.......................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation ~]$ 
+

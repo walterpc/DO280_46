@@ -1,0 +1,48 @@
+[student@workstation ~]$ lab network-policy start
+
+Checking prerequisites for Guided Exercise: Configuring Network Policies
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'network-policy' project is absent......................  SUCCESS
+ · The 'network-test' project is absent........................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Configuring Network Policies
+
+ · Validate 'admin' can log in with password 'redhat'..........  SUCCESS
+ · Validate 'leader' can log in with password 'redhat'.........  SUCCESS
+ · Validate 'developer' can log in with password 'developer'...  SUCCESS
+ Preparing Workstation:
+ · Download exercise files.....................................  SUCCESS
+ · Download solution files.....................................  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$ 
+
+
+[student@workstation network-policy]$ cd
+[student@workstation ~]$ lab network-policy finish
+
+Completing Guided Exercise: Configuring Network Policies
+
+ · Delete OpenShift project 'network-policy'...................  SUCCESS
+ · Wait for project 'network-policy' to be gone................  SUCCESS
+ · Delete OpenShift project 'network-test'.....................  SUCCESS
+ · Wait for project 'network-test' to be gone..................  SUCCESS
+ · Remove network.openshift.io/policy-group=ingress label from 
+   the default project.........................................  SUCCESS
+ · Remove exercise files.......................................  SUCCESS
+ · Remove solution files.......................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation ~]$ 
+
+

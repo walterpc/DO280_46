@@ -1,0 +1,80 @@
+[student@workstation ~]$ lab auth-rbac start
+
+Checking prerequisites for Guided Exercise: Defining and Applying permissions using RBAC
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'auth-rbac' project is absent...........................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Defining and Applying permissions using RBAC
+
+ · Create HTPasswd entry for 'admin'...........................  SUCCESS
+ · Create HTPasswd entry for 'leader'..........................  SUCCESS
+ · Create HTPasswd entry for 'developer'.......................  SUCCESS
+ · Create HTPasswd entry for 'qa-engineer'.....................  SUCCESS
+ · Create HTPasswd secret: 'localusers'........................  SUCCESS
+ · Add HTPasswd IdP............................................  SUCCESS
+ · Pause for creation of first oauth pod.......................  SUCCESS
+ · Pause for creation of second oauth pod......................  SUCCESS
+ · Wait up to 1 minute for oauth pod containers to be ready....  SUCCESS
+ · Delete all previous users...................................  SUCCESS
+ · Delete all previous identities..............................  SUCCESS
+ · Pause 5 seconds before validating authentication............  SUCCESS
+ · Validate 'admin' can log in with password 'redhat'..........  SUCCESS
+ · Validate 'leader' can log in with password 'redhat'.........  SUCCESS
+ · Validate 'developer' can log in with password 'developer'...  SUCCESS
+ · Validate 'qa-engineer' can log in with password 'redhat'....  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$
+
+[student@workstation ~]$ oc get oauth
+NAME      AGE
+cluster   19d
+[student@workstation ~]$ oc edit oauth
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  creationTimestamp: "2021-07-13T12:14:15Z"
+  generation: 6
+  name: cluster
+  resourceVersion: "256112"
+  selfLink: /apis/config.openshift.io/v1/oauths/cluster
+  uid: c1d4f788-a51a-4e01-b162-d1bb686a2e14
+spec:
+  identityProviders:
+  - htpasswd:
+      fileData:
+        name: localusers
+    mappingMethod: claim
+    name: localusers
+    type: HTPasswd
+
+[student@workstation rbac-using]$ lab auth-rbac finish
+
+Completing Guided Exercise: Defining and Applying permissions using RBAC
+
+ · Delete OpenShift project 'auth-rbac'........................  SUCCESS
+ · Wait for project 'auth-rbac' to be gone.....................  SUCCESS
+ · Remove group 'dev-group'....................................  SUCCESS
+ · Remove group 'qa-group'.....................................  SUCCESS
+ · Delete HTPasswd entry for 'qa-engineer'.....................  SUCCESS
+ · Update the 'localusers' secret data.........................  SUCCESS
+ · Remove user 'qa-engineer'...................................  SUCCESS
+ · Remove identity 'localusers:qa-engineer'....................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation rbac-using]$ 
+

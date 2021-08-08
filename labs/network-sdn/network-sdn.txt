@@ -1,0 +1,40 @@
+[student@workstation ~]$ lab network-sdn start
+
+Checking prerequisites for Guided Exercise: Troubleshooting OpenShift Software-Defined Networking
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'network-sdn' project is absent.........................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Troubleshooting OpenShift Software-Defined Networking
+
+ · Validate 'admin' can log in with password 'redhat'..........  SUCCESS
+ · Validate 'leader' can log in with password 'redhat'.........  SUCCESS
+ · Validate 'developer' can log in with password 'developer'...  SUCCESS
+ Preparing the student's workstation:
+ · Download exercise files.....................................  SUCCESS
+ · Download solution files.....................................  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$ 
+
+[student@workstation network-sdn]$ cd
+[student@workstation ~]$ oc delete project network-sdn 
+project.project.openshift.io "network-sdn" deleted
+[student@workstation ~]$ lab network-sdn finish
+
+Completing Guided Exercise: Troubleshooting OpenShift Software-Defined Networking
+
+ · Remove exercise files.......................................  SUCCESS
+ · Remove solution files.......................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+

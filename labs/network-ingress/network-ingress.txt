@@ -1,0 +1,45 @@
+[student@workstation ~]$ oc whoami
+admin
+[student@workstation ~]$ lab network-ingress start
+
+Checking prerequisites for Guided Exercise: Controlling Cluster Network Ingress
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'network-ingress' project is absent.....................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Controlling Cluster Network Ingress
+
+ · Validate 'admin' can log in with password 'redhat'..........  SUCCESS
+ · Validate 'leader' can log in with password 'redhat'.........  SUCCESS
+ · Validate 'developer' can log in with password 'developer'...  SUCCESS
+ Preparing Workstation:
+ · Download exercise files.....................................  SUCCESS
+ Configuring Certificates:
+ · Generating unique CA key password...........................  SUCCESS
+ · Setting environment variable in cert. configuration file....  SUCCESS
+ · Generating the CA key.......................................  SUCCESS
+ · Generating CA certificate...................................  SUCCESS
+ · Updating privileges on certs directory......................  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$
+
+
+[student@workstation ~]$ lab network-ingress finish
+
+Completing Guided Exercise: Controlling Cluster Network Ingress
+
+ · Remove exercise files.......................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation ~]$ 
+

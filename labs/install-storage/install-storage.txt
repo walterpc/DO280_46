@@ -1,0 +1,52 @@
+[student@workstation ~]$ lab install-storage start
+
+Checking prerequisites for Guided Exercise: Introducing OpenShift Dynamic Storage
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ · Control plane node 'master02' is ready......................  SUCCESS
+ · Control plane node 'master03' is ready......................  SUCCESS
+ Checking for conflicts with existing OpenShift projects:
+ · The 'install-storage' project is absent.....................  SUCCESS
+
+Setting up the classroom for Guided Exercise: Introducing OpenShift Dynamic Storage
+
+ · Download exercise files.....................................  SUCCESS
+ · Persistent volume claim 'postgresql-storage' is not present.  SUCCESS
+ · Application 'postgres-persistent' is not present............  SUCCESS
+ · Application 'postgres-persistent2' is not present...........  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ~]$
+
+
+[student@workstation ~]$ ls -l DO280/labs/install-storage/
+total 16
+-rwxrwxr-x. 1 student student  831 Jul 23 17:47 check_data.sh
+-rw-rw-r--. 1 student student 1168 Jul 23 17:47 commands.txt
+-rwxrwxr-x. 1 student student  205 Jul 23 17:47 init_data.sh
+-rw-rw-r--. 1 student student  424 Jul 23 17:47 init_data.sql
+[student@workstation ~]$ ls -l DO280_46/labs/install-storage/
+total 20
+-rwxrwxr-x. 1 student student  831 Jul 31 21:17 check_data.sh
+-rw-rw-r--. 1 student student 1168 Jul 31 21:17 commands.txt
+-rwxrwxr-x. 1 student student  205 Jul 31 21:17 init_data.sh
+-rw-rw-r--. 1 student student  424 Jul 31 21:17 init_data.sql
+-rw-rw-r--. 1 student student 1237 Jul 31 21:19 install-storage.txt
+[student@workstation ~]$ ls -l DO280
+total 0
+drwxr-xr-x. 3 student student 29 Jul 31 21:16 labs
+[student@workstation ~]$ lab install-storage finish
+
+Completing Guided Exercise: Introducing OpenShift Dynamic Storage
+
+ · Delete OpenShift project 'install-storage'..................  SUCCESS
+ · Wait for project 'install-storage' to be gone...............  SUCCESS
+ · Remove exercise files.......................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
